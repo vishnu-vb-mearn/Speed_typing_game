@@ -28,9 +28,9 @@ quoteInputElement.addEventListener('input', () => {
 })
 
 function getRandomQuote() {
-  return fetch('http://api.quotable.io/random')
+  return fetch('https://motivational-spark-api.vercel.app/api/quotes/random')
     .then(response => response.json())
-    .then(data => data.content)
+    .then(data => data.quote)
 }
 
 async function renderNewQuote() {
